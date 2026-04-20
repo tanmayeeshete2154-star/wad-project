@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f5f7fa;
+            font-family: 'Poppins', sans-serif;
+        }
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            width: 250px;
+            background: #0d6efd;
+            padding-top: 20px;
+            color: white;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            display: block;
+            font-size: 16px;
+        }
+        .sidebar a:hover {
+            background: rgba(255,255,255,0.2);
+            border-radius: 6px;
+        }
+        .main-content {
+            margin-left: 260px;
+            padding: 25px;
+        }
+        .card {
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+        }
+        .profile {
+            text-align: center;
+            padding: 20px 10px;
+        }
+        .profile img {
+            width: 90px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .progress-bar {
+            background-color: #0d6efd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="profile">
+            <img src="https://via.placeholder.com/90" alt="Student">
+            <h5>Mayuri Pakhale</h5>
+            <p>Student | SY B.Tech</p>
+        </div>
+
+        <a href="#"><i class="bi bi-speedometer2"></i> Dashboard</a>
+        <a href="#"><i class="bi bi-book"></i> Courses</a>
+        <a href="#"><i class="bi bi-clipboard-check"></i> Assignments</a>
+        <a href="#"><i class="bi bi-chat-dots"></i> Messages</a>
+        <a href="#"><i class="bi bi-gear"></i> Settings</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <h2 class="mb-4">Welcome Back, Mayuri 👋</h2>
+
+        <!-- CARDS ROW -->
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5><i class="bi bi-book-half"></i> Total Courses</h5>
+                    <h2 class="text-primary">6</h2>
+                    <p class="text-muted">Enrolled this semester</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5><i class="bi bi-clipboard-check"></i> Completed Tasks</h5>
+                    <h2 class="text-success">18</h2>
+                    <p class="text-muted">Assignments submitted</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5><i class="bi bi-bar-chart"></i> Performance</h5>
+                    <div class="progress mt-2">
+                        <div class="progress-bar" role="progressbar" style="width: 78%;">78%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Courses -->
+        <div class="card mt-4 p-3">
+            <h4 class="mb-3">Recent Courses</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Faculty</th>
+                        <th>Status</th>
+                        <th>Progress</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Computer Networks</td>
+                        <td>Prof. Deshmukh</td>
+                        <td><span class="badge bg-primary">Ongoing</span></td>
+                        <td>
+                            <div class="progress" style="height: 7px;">
+                                <div class="progress-bar" style="width: 65%;"></div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Data Structures</td>
+                        <td>Prof. Khandekar</td>
+                        <td><span class="badge bg-success">Completed</span></td>
+                        <td>
+                            <div class="progress" style="height: 7px;">
+                                <div class="progress-bar bg-success" style="width: 100%;"></div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>DBMS</td>
+                        <td>Prof. Kulkarni</td>
+                        <td><span class="badge bg-warning">Pending</span></td>
+                        <td>
+                            <div class="progress" style="height: 7px;">
+                                <div class="progress-bar bg-warning" style="width: 30%;"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
